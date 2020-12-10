@@ -49698,7 +49698,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-header" }, [
             _c("i", { staticClass: "fa fa-align-justify" }),
-            _vm._v("paises\n                    "),
+            _vm._v("Cliente\n                    "),
             _c(
               "button",
               {
@@ -49885,7 +49885,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "modal-content" }, [
                 _c("div", { staticClass: "modal-header" }, [
                   _c("h4", { staticClass: "modal-title" }, [
-                    _vm._v("Agregar categoría")
+                    _vm._v("Agregar Cliente")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -49940,7 +49940,7 @@ var staticRenderFns = [
                           }),
                           _vm._v(" "),
                           _c("span", { staticClass: "help-block" }, [
-                            _vm._v("(*) Ingrese el nombre de la categoría")
+                            _vm._v("(*) Ingrese el nombre del Cliente")
                           ])
                         ])
                       ]),
@@ -50020,7 +50020,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "modal-content" }, [
                 _c("div", { staticClass: "modal-header" }, [
                   _c("h4", { staticClass: "modal-title" }, [
-                    _vm._v("Eliminar Categoría")
+                    _vm._v("Eliminar Cliente")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -50042,7 +50042,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-body" }, [
-                  _c("p", [_vm._v("Estas seguro de eliminar la categoría?")])
+                  _c("p", [_vm._v("Estas seguro de eliminar el Cliente?")])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-footer" }, [
@@ -50316,7 +50316,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-header" }, [
             _c("i", { staticClass: "fa fa-align-justify" }),
-            _vm._v("idioma\n                    "),
+            _vm._v("Plato\n                    "),
             _c(
               "button",
               {
@@ -50503,7 +50503,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "modal-content" }, [
                 _c("div", { staticClass: "modal-header" }, [
                   _c("h4", { staticClass: "modal-title" }, [
-                    _vm._v("Agregar categoría")
+                    _vm._v("Agregar Plato")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -50558,7 +50558,7 @@ var staticRenderFns = [
                           }),
                           _vm._v(" "),
                           _c("span", { staticClass: "help-block" }, [
-                            _vm._v("(*) Ingrese el nombre de la categoría")
+                            _vm._v("(*) Ingrese el nombre del Plato")
                           ])
                         ])
                       ]),
@@ -50638,7 +50638,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "modal-content" }, [
                 _c("div", { staticClass: "modal-header" }, [
                   _c("h4", { staticClass: "modal-title" }, [
-                    _vm._v("Eliminar Categoría")
+                    _vm._v("Eliminar Plato")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -50660,7 +50660,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-body" }, [
-                  _c("p", [_vm._v("Estas seguro de eliminar la categoría?")])
+                  _c("p", [_vm._v("Estas seguro de eliminar el Plato?")])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-footer" }, [
@@ -50934,7 +50934,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-header" }, [
             _c("i", { staticClass: "fa fa-align-justify" }),
-            _vm._v("editoriales\n                    "),
+            _vm._v("Det_Pedido\n                    "),
             _c(
               "button",
               {
@@ -51121,7 +51121,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "modal-content" }, [
                 _c("div", { staticClass: "modal-header" }, [
                   _c("h4", { staticClass: "modal-title" }, [
-                    _vm._v("Agregar categoría")
+                    _vm._v("Agregar Det_Pedido")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -51176,7 +51176,7 @@ var staticRenderFns = [
                           }),
                           _vm._v(" "),
                           _c("span", { staticClass: "help-block" }, [
-                            _vm._v("(*) Ingrese el nombre de la categoría")
+                            _vm._v("(*) Ingrese el nombre Det_Pedido")
                           ])
                         ])
                       ]),
@@ -51278,7 +51278,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-body" }, [
-                  _c("p", [_vm._v("Estas seguro de eliminar la categoría?")])
+                  _c("p", [_vm._v("Estas seguro de eliminar el Det_Pedido?")])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-footer" }, [
@@ -51552,7 +51552,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-header" }, [
             _c("i", { staticClass: "fa fa-align-justify" }),
-            _vm._v("autores\n                    "),
+            _vm._v("Pedidos\n                    "),
             _c(
               "button",
               {
@@ -51739,7 +51739,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "modal-content" }, [
                 _c("div", { staticClass: "modal-header" }, [
                   _c("h4", { staticClass: "modal-title" }, [
-                    _vm._v("Agregar categoría")
+                    _vm._v("Agregar Pedido")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -51794,7 +51794,7 @@ var staticRenderFns = [
                           }),
                           _vm._v(" "),
                           _c("span", { staticClass: "help-block" }, [
-                            _vm._v("(*) Ingrese el nombre de la categoría")
+                            _vm._v("(*) Ingrese el nombre del Pedido")
                           ])
                         ])
                       ]),
@@ -51896,7 +51896,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-body" }, [
-                  _c("p", [_vm._v("Estas seguro de eliminar la categoría?")])
+                  _c("p", [_vm._v("Estas seguro de eliminar el pedido?")])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-footer" }, [

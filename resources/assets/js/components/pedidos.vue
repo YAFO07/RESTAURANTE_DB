@@ -10,7 +10,7 @@
                 <!-- Ejemplo de tabla Listado -->
                 <div class="card">
                     <div class="card-header">
-                        <i class="fa fa-align-justify"></i>autores
+                        <i class="fa fa-align-justify"></i>Pedidos
                         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalNuevo">
                             <i class="icon-plus"></i>&nbsp;Nuevo
                         </button>
@@ -84,7 +84,7 @@
                 <div class="modal-dialog modal-primary modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Agregar categoría</h4>
+                            <h4 class="modal-title">Agregar Pedido</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">×</span>
                             </button>
@@ -95,7 +95,7 @@
                                     <label class="col-md-3 form-control-label" for="text-input">Nombre</label>
                                     <div class="col-md-9">
                                         <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre de categoría">
-                                        <span class="help-block">(*) Ingrese el nombre de la categoría</span>
+                                        <span class="help-block">(*) Ingrese el nombre del Pedido</span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -127,7 +127,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Estas seguro de eliminar la categoría?</p>
+                            <p>Estas seguro de eliminar el pedido?</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

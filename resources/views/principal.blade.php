@@ -10,7 +10,7 @@
     <meta name="keyword" content="Sistema libros Laravel Vue Js">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="img/favicon.png">
-    <title> La Loma Restaurant</title>
+    <title> La Loma </title>
     <!-- Icons -->
 
     <link rel="stylesheet" href="css/plantilla.css">
@@ -57,7 +57,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <img src="img/avatars/6.jpg" class="img-avatar" alt="yeison@gmail.com">
-                    <span class="d-md-down-none">REYMON </span>
+                    <span class="d-md-down-none">YEISON </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-header text-center">
