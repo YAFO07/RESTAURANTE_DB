@@ -10,7 +10,7 @@
     <meta name="keyword" content="Sistema libros Laravel Vue Js">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="img/favicon.png">
-    <title> La Loma </title>
+    <title>Restaurante La Loma </title>
     <!-- Icons -->
 
     <link rel="stylesheet" href="css/plantilla.css">
