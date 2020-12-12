@@ -11,16 +11,16 @@
                     <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-bag"></i> General</a>
                     <ul class="nav-dropdown-items">
                         <li @click="menu=1" class="nav-item">
-                            <a class="nav-link" href="#"><i class="icon-bag"></i> Clientes</a>
+                            <a class="nav-link" href="#"><i class="icon-bag"></i> Cliente</a>
                         </li>
                         <li @click="menu=2" class="nav-item">
-                            <a class="nav-link" href="#"><i class="icon-bag"></i> Pedidos</a>
+                            <a class="nav-link" href="#"><i class="icon-bag"></i> Pedido</a>
                         </li>
                         <li @click="menu=3" class="nav-item">
-                            <a class="nav-link" href="#"><i class="icon-bag"></i> Platos</a>
+                            <a class="nav-link" href="#"><i class="icon-bag"></i> Plato</a>
                         </li>
                         <li @click="menu=4" class="nav-item">
-                            <a class="nav-link" href="#"><i class="icon-bag"></i> Det_Pedidos</a>
+                            <a class="nav-link" href="#"><i class="icon-bag"></i> Det_Pedido</a>
                         </li>
                     </ul>
                 </li>

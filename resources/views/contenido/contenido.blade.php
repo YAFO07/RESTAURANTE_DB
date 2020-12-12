@@ -2,15 +2,15 @@
 @section('contenido')
 <main class="main">
 <template v-if="menu==1">
-<Cliente></Cliente>
+<cliente></cliente>
 </template>
 <template v-if="menu==2">
-<Pedido></Pedido>
+<pedido></pedido>
 </template>
 <template v-if="menu==3">
-<Plato></Plato>
+<plato></plato>
 </template>
 <template v-if="menu==4">
-<Det_Pedido></Det_Pedido>
+<det_pedido></det_pedido>
 </template>
 @endsection

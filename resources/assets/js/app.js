@@ -15,12 +15,15 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('clientes', require('./components/clientes.vue'));
-Vue.component('platos', require('./components/platos.vue'));
-Vue.component('det_pedidos', require('./components/det_pedidos.vue'));
-Vue.component('pedidos', require('./components/pedidos.vue'));
+Vue.component('Cliente', require('./components/clientes.vue'));
+Vue.component('Pedido', require('./components/pedidos.vue'));
+Vue.component('Plato', require('./components/platos.vue'));
+Vue.component('det_pedido', require('./components/det_pedidos.vue'));
 
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+        menu:0
+    }
 });

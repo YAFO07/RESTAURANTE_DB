@@ -18,22 +18,29 @@ class Clientecontroller extends Controller
     public function store(Request $request)
     {
         $Cliente = new cliente();
-        $Cliente->color = $request->color;
-        $Cliente->marca = $request->marca;
+        $Cliente->nombre = $request->nombre;
+        $Cliente->direccion = $request->direccion;
+        $Cliente->telefono = $request->telefono;
+        $Cliente->email = $request->email;
         $Cliente->save();
     }
 
     public function update(Request $request)
     {
-        $Cliente = Clienteliente::findOrFail($request->id);
-        $Cliente->color = $request->color;
-        $Cliente->marca = $request->marca;
+        $Cliente = cliente::findOrFail($request->id);
+        $Cliente->nombre = $request->nombre;
+        $Cliente->direccion = $request->direccion;
+        $Cliente->telefono = $request->telefono;
+        $Cliente->email = $request->email;
         $Cliente->save();
     }
     public function destroy(Request $request)
     {
         $Cliente = cliente::findOrFail($request->id);
-        $Cliente->color = $request->color;
+        $Cliente->nombre = $request->nombre;
+        $Cliente->direccion = $request->direccion;
+        $Cliente->telefono = $request->telefono;
+        $Cliente->email = $request->email;
         $Cliente->delete();
     }
 }
