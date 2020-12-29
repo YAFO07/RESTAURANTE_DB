@@ -7,11 +7,11 @@ use App\cliente;
 
 class Clientecontroller extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        $Cliente=cliente::orderBy('id','nombre ','direccion',"telefono","email")->get();
+        $Cliente=cliente::orderBy('nombre','direccion','telefono','email','asc')->get();
         return [
-            'Cliente'=>$Cliente
+            'cliente'=>$Cliente
         ];
     }
 

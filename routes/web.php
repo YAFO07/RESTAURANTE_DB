@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('contenido/contenido');
 });
+
+Route::get('cliente/','Clientecontroller@index');
+Route::get('cliente/guardar','Clientecontroller@index');
