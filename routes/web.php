@@ -36,3 +36,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contenido', 'HomeController@redi')->name('cont');
+Route::get('welcome', 'HomeController@redi')->name('cerrar');

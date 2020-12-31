@@ -31,4 +31,9 @@ class HomeController extends Controller
         return view('contenido.contenido');
     }
 
+    public function cerrar()
+    {
+        return view('plantilla.welcome');
+    }
+
 }

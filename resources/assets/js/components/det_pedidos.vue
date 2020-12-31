@@ -260,8 +260,7 @@
                                         placeholder="ingrese la email del cliente "
                                     />
                                     <span class="help-block"
-                                        >(*) Ingrese email del cliente</span
-                                    >
+                                        >(*) Ingrese email del cliente</span>
                                 </div>
                             </div>
                         </form>

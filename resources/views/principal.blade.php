@@ -64,7 +64,7 @@
                         <strong>Cuenta</strong>
                     </div>
                     <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Perfil</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-lock"></i> Cerrar sesión</a>
+                    <a class="dropdown-item" href="/welcome"><i class="fas fa-lock"></i> Cerrar sesión</a>
                 </div>
             </li>
         </ul>
