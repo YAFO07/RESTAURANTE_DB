@@ -1,3 +1,4 @@
+
 <div class="sidebar">
         <nav class="sidebar-nav">
             <ul class="nav">
@@ -9,7 +10,7 @@
                 </li>
                 <li class="nav-item nav-dropdown">
                     <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-bag"></i> General</a>
-                    <ul class="nav-dropdown-items">
+                    <ul class="nav-items">
                         <li @click="menu=1" class="nav-item">
                             <a class="nav-link" href="#"><i class="icon-bag"></i> Cliente</a>
                         </li>
@@ -21,23 +22,6 @@
                         </li>
                         <li @click="menu=4" class="nav-item">
                             <a class="nav-link" href="#"><i class="icon-bag"></i> Det_Pedido</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item nav-dropdown">
-                    <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-wallet"></i>Registro</a>
-                    <ul class="nav-dropdown-items">
-                        <li class="nav-item">
-                            <a class="nav-link" href="i#"><i class="icon-wallet"></i>Pedido</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="icon-notebook"></i>Solicitud Pedido</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="icon-bag"></i>Usuarios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="icon-bag"></i>Clientes</a>
                         </li>
                     </ul>
                 </li>

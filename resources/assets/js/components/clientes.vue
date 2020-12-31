@@ -58,20 +58,11 @@
                 <td v-text="objeto.email"></td>
                 <td>
                   <button
-                    type="button"
-                    class="btn btn-warning btn-sm"
-                    data-toggle="modal"
-                    data-target="#modalNuevo"
-                  >
+                    type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalNuevo">
                     <i class="icon-pencil"></i>
                   </button>
                   &nbsp;
-                  <button
-                    type="button"
-                    class="btn btn-danger btn-sm"
-                    data-toggle="modal"
-                    data-target="#modalNuevo"
-                  >
+                  <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" @click="eliminarCat(objeto)">
                     <i class="icon-trash"></i>
                   </button>
                 </td>
@@ -185,7 +176,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cerrar</button>
-            <button type="button" class="btn btn-primary">Guardar</button>
+            <button type="button" @click="regCat" class="btn btn-primary">Guardar</button>
           </div>
         </div>
         <!-- /.modal-content -->
@@ -227,7 +218,7 @@
             >
               Cerrar
             </button>
-            <button type="button" class="btn btn-danger">Eliminar</button>
+            <button type="button" @click="eliminarCat" class="btn btn-danger">Eliminar</button>
           </div>
         </div>
         <!-- /.modal-content -->
@@ -259,11 +250,38 @@ export default {
         .catch(function (error) {
           console.log(error);
         });
-    }
-    
-
-
-  },
+    },
+    regCat() {
+      let me = this;
+      var url = "/cliente/registrar";
+      axios.post(url, {
+          nombre: this.nombre,
+          direccion: this.direccion,
+          telefono: this.telefono,
+          email: this.email
+        })
+        .then(function (response) {
+          me.liscat();
+          alert("se guardo correctamente");
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+    eliminarCat(data = []) {
+      let me = this;
+          var url = "/cliente/eliminar";
+          axios.post(url, {
+              id: data["id"],
+            })
+            .then(function (response) {
+              me.liscat();
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        }
+    },
   mounted() {
     console.log("Component mounted.");
     this.liscat();

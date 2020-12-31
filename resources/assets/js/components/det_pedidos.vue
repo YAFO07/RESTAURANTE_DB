@@ -1,150 +1,404 @@
 <template>
     <div id="app">
-       <!-- Breadcrumb -->
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">Home</li>
-                <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
-            </ol>
-            <div class="container-fluid">
-                <!-- Ejemplo de tabla Listado -->
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fa fa-align-justify"></i>Det_Pedido
-                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalNuevo">
-                            <i class="icon-plus"></i>&nbsp;Nuevo
-                        </button>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group row">
-                            <div class="col-md-6">
-                                <div class="input-group">
-                                    <select class="form-control col-md-3" id="opcion" name="opcion">
-                                      <option value="nombre">Nombre</option>
-                                      <option value="descripcion">Descripción</option>
-                                    </select>
-                                    <input type="text" id="texto" name="texto" class="form-control" placeholder="Texto a buscar">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
-                                </div>
+        <!--  -->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">Home</li>
+            <li class="breadcrumb-item"><a href="#">Admin</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-align-justify"></i>Det_pedido
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-toggle="modal"
+                        data-target="#modalNuevo"
+                    >
+                        <i class="icon-plus"></i>&nbsp;Nuevo
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <select
+                                    class="form-control col-md-3"
+                                    id="opcion"
+                                    name="opcion"
+                                >
+                                    <option value="nombre">Nombre</option>
+                                    <option value="descripcion"
+                                        >Descripción</option
+                                    >
+                                </select>
+                                <input
+                                    type="text"
+                                    id="texto"
+                                    name="texto"
+                                    class="form-control"
+                                    placeholder="Texto a buscar"
+                                />
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-search"></i> Buscar
+                                </button>
                             </div>
                         </div>
-                        <table class="table table-bordered table-striped table-sm">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Opciones</th>
-                                    <th>estado</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalNuevo">
-                                          <i class="icon-pencil"></i>
-                                        </button> &nbsp;
-                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalEliminar">
-                                          <i class="icon-trash"></i>
-                                        </button>
-                                    </td>
-                                    <td>Matematicas</td>
-                                    <td>
-                                        <span class="badge badge-success">Activo</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Ant</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Sig</a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
+                    <table class="table table-bordered table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th>Costo</th>
+                                <th>Id_plato</th>
+                                <th>Id_pedido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="objeto in ArrayDatos" :key="objeto.id">
+                                <td v-text="objeto.costo"></td>
+                                <td v-text="objeto.id_plato"></td>
+                                <td v-text="objeto.id_pedido"></td>
+                                <td>
+                                    <button
+                                        type="button"
+                                        class="btn btn-warning btn-sm"
+                                        data-toggle="modal"
+                                        data-target="#modalNuevo"
+                                    >
+                                        <i class="icon-pencil"></i>
+                                    </button>
+                                    &nbsp;
+                                    <button
+                                        type="button"
+                                        class="btn btn-danger btn-sm"
+                                        data-toggle="modal"
+                                        @click="eliminarCat(objeto)"
+                                    >
+                                        <i class="icon-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">COSTO</th>
+                                <th scope="col">ID_PLATO</th>
+                                <th scope="col">ID_PEDIDO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#">Ant</a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Sig</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <!-- Fin ejemplo de tabla Listado -->
             </div>
-            <!--Inicio del modal agregar/actualizar-->
-            <div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-primary modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Agregar Det_Pedido</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="text-input">Nombre</label>
-                                    <div class="col-md-9">
-                                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre de categoría">
-                                        <span class="help-block">(*) Ingrese el nombre Det_Pedido</span>
-                                    </div>
+            <!-- Fin ejemplo de tabla Listado -->
+        </div>
+        <!--Inicio del modal agregar/actualizar-->
+        <div
+            class="modal fade"
+            id="modalNuevo"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            style="display: none"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-primary modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Det_pedido</h4>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">X</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form
+                            action=""
+                            method="post"
+                            enctype="multipart/form-data"
+                            class="form-horizontal"
+                        >
+                            <div class="form-group row">
+                                <label
+                                    class="col-md-3 form-control-label"
+                                    for="text-input"
+                                    >nombre</label
+                                >
+                                <div class="col-md-9">
+                                    <input
+                                        type="text"
+                                        v-model="nombre"
+                                        id="nombre"
+                                        name="nombre"
+                                        class="form-control"
+                                        placeholder="ingrese el nombre "
+                                    />
+                                    <span class="help-block"
+                                        >(*) Ingrese el nombre del cliente</span
+                                    >
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="email-input">Descripción</label>
-                                    <div class="col-md-9">
-                                        <input type="email" id="descripcion" name="descripcion" class="form-control" placeholder="Enter Email">
-                                    </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-body">
+                        <form
+                            action=""
+                            method="post"
+                            enctype="multipart/form-data"
+                            class="form-horizontal"
+                        >
+                            <div class="form-group row">
+                                <label
+                                    class="col-md-3 form-control-label"
+                                    for="text-input"
+                                    >telefono</label
+                                >
+                                <div class="col-md-9">
+                                    <input
+                                        type="text"
+                                        v-model="telefono"
+                                        id="telefono"
+                                        name="telefono"
+                                        class="form-control"
+                                        placeholder="ingrese el telefono del cliente "
+                                    />
+                                    <span class="help-block"
+                                        >(*) Ingrese telefono del cliente</span
+                                    >
                                 </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-primary">Guardar</button>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <!--Fin del modal-->
-            <!-- Inicio del modal Eliminar -->
-            <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-danger" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Eliminar Categoría</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Estas seguro de eliminar el Det_Pedido?</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </div>
+                    <div class="modal-body">
+                        <form
+                            action=""
+                            method="post"
+                            enctype="multipart/form-data"
+                            class="form-horizontal"
+                        >
+                            <div class="form-group row">
+                                <label
+                                    class="col-md-3 form-control-label"
+                                    for="text-input"
+                                    >direccion</label
+                                >
+                                <div class="col-md-9">
+                                    <input
+                                        type="text"
+                                        v-model="direccion"
+                                        id="direccion"
+                                        name="direccion"
+                                        class="form-control"
+                                        placeholder="ingrese la direccion del cliente "
+                                    />
+                                    <span class="help-block"
+                                        >(*) Ingrese direccion del cliente</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-md-3 form-control-label"
+                                    for="text-input"
+                                    >email</label
+                                >
+                                <div class="col-md-9">
+                                    <input
+                                        type="text"
+                                        v-model="email"
+                                        id="email"
+                                        name="email"
+                                        class="form-control"
+                                        placeholder="ingrese la email del cliente "
+                                    />
+                                    <span class="help-block"
+                                        >(*) Ingrese email del cliente</span
+                                    >
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <!-- /.modal-content -->
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                        >
+                            Cerrar
+                        </button>
+                        <button
+                            type="button"
+                            @click="regCat"
+                            class="btn btn-primary"
+                        >
+                            Guardar
+                        </button>
+                    </div>
                 </div>
-                <!-- /.modal-dialog -->
+                <!-- /.modal-content -->
             </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!--Fin del modal-->
+        <!-- Inicio del modal Eliminar -->
+        <div
+            class="modal fade"
+            id="modalEliminar"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            style="display: none"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-danger" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Eliminar cliente</h4>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">X</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Estas seguro de eliminar cliente?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                        >
+                            Cerrar
+                        </button>
+                        <button
+                            type="button"
+                            @click="eliminarCat"
+                            class="btn btn-danger"
+                        >
+                            Eliminar
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
     </div>
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
+export default {
+    data() {
+        return {
+            ArrayDatos: [],
+            nombre: "",
+            direccion: "",
+            telefono: "",
+            email: ""
+        };
+    },
+    methods: {
+        liscat() {
+            let me = this;
+            var url = "/cliente";
+            axios
+                .get(url)
+                .then(function(response) {
+                    var respuesta = response.data;
+                    me.ArrayDatos = respuesta.cliente;
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+        },
+        regCat() {
+            let me = this;
+            var url = "/cliente/registrar";
+            axios
+                .post(url, {
+                    nombre: this.nombre,
+                    direccion: this.direccion,
+                    telefono: this.telefono,
+                    email: this.email
+                })
+                .then(function(response) {
+                    me.liscat();
+                    alert("se guardo correctamente");
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+        },
+        eliminarCat(data = []) {
+            let me = this;
+            var url = "/cliente/eliminar";
+            axios
+                .post(url, {
+                    id: data["id"]
+                })
+                .then(function(response) {
+                    me.liscat();
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
         }
+    },
+    mounted() {
+        console.log("Component mounted.");
+        this.liscat();
     }
+};
 </script>

@@ -45,11 +45,11 @@
                         <strong>Notificaciones</strong>
                     </div>
                     <a class="dropdown-item" href="#">
-                        <i class="fa fa-envelope-o"></i> Libros
+                        <i class="fa fa-envelope-o"></i>Platos
                         <span class="badge badge-success">3</span>
                     </a>
                     <a class="dropdown-item" href="#">
-                        <i class="fa fa-tasks"></i> New
+                        <i class="fa fa-tasks"></i> Nuevos
                         <span class="badge badge-danger">2</span>
                     </a>
                 </div>

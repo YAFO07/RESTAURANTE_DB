@@ -12,8 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('contenido/contenido');
+    return view('welcome');
+});
+Route::get('/contenido', function () {
+   return view('contenido/contenido');
 });
 
 Route::get('cliente/','Clientecontroller@index');
-Route::get('cliente/guardar','Clientecontroller@index');
+Route::post('/cliente/registrar','Clientecontroller@store');
+Route::put('/cliente/actualizar','Clientecontroller@update');
+Route::post('/cliente/eliminar','Clientecontroller@destroy');
+
+Route::get('plato/','Platocontroller@index');
+Route::post('/plato/registrar','Platocontroller@store');
+Route::put('/plato/actualizar','Platocontroller@update');
+Route::post('/plato/eliminar','Platocontroller@destroy');
+
+Route::get('pedido/','Pedidocontroller@index');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
