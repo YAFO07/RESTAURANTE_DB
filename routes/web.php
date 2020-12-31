@@ -14,9 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/contenido', function () {
-   return view('contenido/contenido');
-});
+ Route::get('/contenido', function () {
+    return view('contenido/contenido');
+ });
+
 
 Route::get('cliente/','Clientecontroller@index');
 Route::post('/cliente/registrar','Clientecontroller@store');
@@ -34,3 +35,4 @@ Route::get('pedido/','Pedidocontroller@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/contenido', 'HomeController@redi')->name('cont');

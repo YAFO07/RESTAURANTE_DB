@@ -81,7 +81,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <table class="table">
+                    <!-- <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -93,7 +93,7 @@
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>Mark</td>
+                                <td>12.000</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
                             </tr>
@@ -109,7 +109,7 @@
                                 <td>@twitter</td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table> -->
                     <nav>
                         <ul class="pagination">
                             <li class="page-item">

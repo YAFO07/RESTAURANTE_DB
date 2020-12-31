@@ -18,7 +18,9 @@
                 Estás conectado
 
 
-                <a href="" class="btn btn-info bt-sm">Aceptar</a>
+                <li @click="menu=4" class="nav-item">
+                        <a class="nav-link" href="/contenido"><i class="fa fa-group"></i> Aceptar</a>
+                    </li>
             </div>
         </div>
     </div>
